@@ -1,0 +1,211 @@
+<html>
+ <head>
+  <title>
+   Cheat VVP Anti Baned
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+        .container h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            white-space: nowrap;
+            display: inline-block;
+            animation: slide 10s linear infinite;
+        }
+        .container h1 i {
+            color: yellow;
+        }
+        .option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .option input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .button {
+            background: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .button i {
+            margin-left: 10px;
+        }
+        .warning {
+            margin-top: 20px;
+            font-size: 12px;
+            color: black;
+            animation: blink 1s infinite;
+        }
+        .warning i {
+            color: yellow;
+        }
+        .notification {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: green;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        .center-notification {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .center-notification img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+        @keyframes slide {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>
+    <i class="fas fa-bolt">
+    </i>
+    CHEAT VVP ANTI BANED
+    <i class="fas fa-bolt">
+    </i>
+   </h1>
+   <div class="option">
+    <input id="autoHS" onclick="toggleNotification('AUTO HS')" type="checkbox"/>
+    <label for="autoHS">
+     AUTO HS
+    </label>
+   </div>
+   <div class="option">
+    <input id="aimLockLeher" onclick="toggleNotification('AIM LOCK LEHER')" type="checkbox"/>
+    <label for="aimLockLeher">
+     AIM LOCK LEHER
+    </label>
+   </div>
+   <div class="option">
+    <input id="aimLockKepala" onclick="toggleNotification('AIM LOCK KEPALA')" type="checkbox"/>
+    <label for="aimLockKepala">
+     AIM LOCK KEPALA
+    </label>
+   </div>
+   <div class="option">
+    <input id="tembusTembok" onclick="toggleNotification('TEMBUS TEMBOK')" type="checkbox"/>
+    <label for="tembusTembok">
+     TEMBUS TEMBOK
+    </label>
+   </div>
+   <div class="option">
+    <input id="npcName" onclick="toggleNotification('NPC NAME')" type="checkbox"/>
+    <label for="npcName">
+     NPC NAME
+    </label>
+   </div>
+   <div class="option">
+    <input id="baypasVVIP" onclick="toggleNotification('BAYPAS VVIP ANTI BANED')" type="checkbox"/>
+    <label for="baypasVVIP">
+     BAYPAS VVIP ANTI BANED
+    </label>
+   </div>
+   <button class="button" onclick="openApp()">
+    BUKA FREE FIRE
+    <i class="fas fa-biohazard">
+    </i>
+   </button>
+   <div class="warning">
+    <i class="fas fa-exclamation-triangle">
+    </i>
+    PANEL INI SEDANG DALAM PENGEMBANGAN
+    <i class="fas fa-exclamation-triangle">
+    </i>
+   </div>
+   <div class="notification" id="notification">
+    Telah Aktif
+   </div>
+  </div>
+  <div class="center-notification" id="centerNotification">
+   <img alt="Notification Image" height="200" src="notif.jpg" width="200"/>
+  </div>
+  <script>
+   function toggleNotification(option) {
+            var checkbox = document.getElementById(option.toLowerCase().replace(/ /g, ''));
+            var notification = document.getElementById('notification');
+            if (checkbox.checked) {
+                notification.innerText = option + ' Telah Aktif';
+                notification.style.background = 'green';
+            } else {
+                notification.innerText = option + ' Telah Dimatikan';
+                notification.style.background = 'red';
+            }
+            notification.style.display = 'block';
+            setTimeout(function() {
+                notification.style.display = 'none';
+            }, 2000);
+        }
+
+        function openApp() {
+            // Replace with the actual URL scheme of the app you want to open
+            window.location.href = 'freefire://';
+        }
+
+        window.onload = function() {
+            var centerNotification = document.getElementById('centerNotification');
+            centerNotification.style.display = 'flex';
+            setTimeout(function() {
+                centerNotification.style.display = 'none';
+            }, 2000);
+        }
+  </script>
+ </body>
+</html>
